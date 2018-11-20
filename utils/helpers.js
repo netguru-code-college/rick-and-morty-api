@@ -3,6 +3,7 @@ exports.site = 'https://rickandmortyapi.com/api'
 exports.message = {
   noPage: 'There is nothing here',
   noCharacter: 'Character not found',
+  noComments: 'No comments',
   noLocation: 'Location not found',
   noEpisode: 'Episode not found',
   badParam: 'Hey! that parameter is not allowed, try with a number instead ;)',
@@ -15,6 +16,7 @@ exports.collection = {
   queries: {
     character: ['name', 'status', 'species', 'type', 'gender'],
     episode: ['name', 'episode'],
-    location: ['name', 'dimension', 'type']
+    location: ['name', 'dimension', 'type'],
+    comment: ['episode_id']
   }
 }

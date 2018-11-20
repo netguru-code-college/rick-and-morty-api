@@ -25,8 +25,8 @@ const queryById = async (Col, id) => {
   return { data: Col.structure(data) }
 }
 
-const queryByFilter = async (Col, req) => {
-  const opt = Object.assign(req.query, { skip: req.payload.skip })
+const queryByFilter = async (Col, req, query) => {
+  const opt = Object.assign(req.query, { skip: req.payload.skip }, query)
 
   const { results, count } = await Col.findAndCount(opt)
 

@@ -15,6 +15,7 @@ const episodeSchema = new mongoose.Schema({
   },
   air_date: String,
   characters: Array,
+  comments: Array,
   url: String,
   author: {
     type: mongoose.Schema.ObjectId, ref: 'User'

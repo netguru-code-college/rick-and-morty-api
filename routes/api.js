@@ -1,19 +1,20 @@
 const express = require('express')
-const router = express.Router()
-
 const { sanitizeQuery } = require('express-validator/filter')
 
+const operations = require('../controllers/handleOperations')
+const episode = require('../controllers/episode')
+const comments = require('../controllers/comments')
+const { pagination, checkArray, showData, checkData } = require('./middlewares')
 const { catchErrors } = require('../handlers/errors')
 const { site, collection } = require('../utils/helpers')
 
-const operations = require('../controllers/handleOperations')
-const { pagination, checkArray, showData, checkData } = require('./middlewares')
-
+const router = express.Router()
 const sanitize = model => sanitizeQuery(collection.queries[model]).trim()
 
 const hooks = {
   find: [pagination, catchErrors(operations.getAll), checkData, showData],
-  findById: [checkArray, catchErrors(operations.getById)]
+  findById: [checkArray, catchErrors(operations.getById)],
+  findComments: [pagination, catchErrors(episode.getComments), checkData, showData],
 }
 
 router.get('/', (req, res) => {
@@ -34,5 +35,10 @@ router.get('/location/:id', hooks.findById)
 
 router.get('/episode', sanitize("episode"), hooks.find)
 router.get('/episode/:id', hooks.findById)
+
+router.get('/episode/:id/comments', hooks.findComments)
+router.post('/episode/:id/comments', episode.postComment)
+
+router.post('/comments', comments.create);
 
 module.exports = router

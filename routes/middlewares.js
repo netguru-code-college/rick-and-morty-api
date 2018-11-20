@@ -29,7 +29,11 @@ const showData = (req, res) => {
 
   const qr = Object.keys(req.query).reduce((acc, key) => {
     // if the query isn't undefined and it's an allowed query for the path
-    if (req.query[key] && collection.queries[path].includes(key)) {
+    if (
+      req.query[key] &&
+      collection.queries[path] &&
+      collection.queries[path].includes(key)
+    ) {
       // add it to the url
       acc+= `&${key}=${req.query[key]}`
     }
