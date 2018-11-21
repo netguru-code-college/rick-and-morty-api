@@ -23,7 +23,7 @@ function postComment (req, res) {
     episode_id: req.params.id,
   })
     .then(data => {
-      res.json(data);
+      res.json(Comment.structure(data));
     })
     .catch(err => {
       console.log(err);
