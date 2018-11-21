@@ -5,9 +5,12 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const path = require('path')
 const morgan = require('morgan')
+const cors = require('cors')
 const { ApolloServer } = require('apollo-server-express')
 
 const app = express()
+
+app.use(cors())
 
 const typeDefs = require('./graphql/typeDefs')
 const resolvers = require('./graphql/resolvers')
