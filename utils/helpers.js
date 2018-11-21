@@ -1,4 +1,4 @@
-exports.site = 'https://rickandmortyapi.com/api'
+exports.site = 'http://tiny-rick.tk/api'
 
 exports.message = {
   noPage: 'There is nothing here',
