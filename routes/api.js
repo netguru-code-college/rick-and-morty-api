@@ -3,6 +3,7 @@ const { sanitizeQuery } = require('express-validator/filter')
 
 const operations = require('../controllers/handleOperations')
 const episode = require('../controllers/episode')
+const questions = require('../controllers/questions')
 const comments = require('../controllers/comments')
 const { pagination, checkArray, showData, checkData } = require('./middlewares')
 const { catchErrors } = require('../handlers/errors')
@@ -36,6 +37,7 @@ router.get('/location/:id', hooks.findById)
 router.get('/episode', sanitize("episode"), hooks.find)
 router.get('/episode/:id', hooks.findById)
 
+router.get('/questions', questions.findAll)
 router.get('/episode/:id/comments', hooks.findComments)
 router.post('/episode/:id/comments', episode.postComment)
 
