@@ -9,9 +9,9 @@
 > Hey, did you ever want to hold a terry fold?,
 >  I got one right here, grab my terry flap.
 
-[The Rick and Morty API](https://rickandmortyapi.com) (or ShlaAPI) is a RESTful and GraphQL API based on the television show [Rick and Morty](https://www.adultswim.com/videos/rick-and-morty). You will access to data about hundreds of characters, images, locations and episodes.
+[The Rick and Morty API](http://tiny-rick.tk) (or ShlaAPI) is a RESTful and GraphQL API based on the television show [Rick and Morty](https://www.adultswim.com/videos/rick-and-morty). You will access to data about hundreds of characters, images, locations and episodes.
 
-**To get started check the documentation on [rickandmortyapi.com](https://rickandmortyapi.com/documentation) or just keep reading ;)**
+**To get started check the documentation n [tiny-rick.tk](http://tiny-rick.tk/documentation) or just keep reading ;)**
 
 You can check the code of the site [here](https://github.com/afuh/rick-and-morty-api-site)
 
@@ -56,7 +56,7 @@ This documentation will help you get familiar with the resources of the **Rick a
 The **Rick and Morty API** is an open API, no authentication is required for use. Nonetheless, to prevent malicious usage of the API there is a limit on the number of requests a given IP address can make. This limit is 10000 requests per day. If you happen to hit the limit you'll receive a `429` status (Too Many Requests) on all your requests during a period of 12 hours.
 
 ### GraphQL
-https://rickandmortyapi.com/graphql/   
+http://tiny-rick.tk/graphql/   
 
 *Sample query*
 ```graphql
@@ -78,20 +78,20 @@ Check [here](#filter-characters) to know more about how to filter.
 > *New to GraphQL? check the docs [here](https://graphql.org/learn/)*
 
 ### REST
-**Base url:** https://rickandmortyapi.com/api/
+**Base url:** http://tiny-rick.tk/api/
 
 The base url contains information about all available API's resources.
 All requests are `GET` requests and go over `https`. All responses will return data in `json`.
 
 *Sample request*
 ```
-https://rickandmortyapi.com/api/
+http://tiny-rick.tk/api/
 ```
 ```js
 {
-  "characters": "https://rickandmortyapi.com/api/character",
-  "locations": "https://rickandmortyapi.com/api/location",
-  "episodes": "https://rickandmortyapi.com/api/episode"
+  "characters": "http://tiny-rick.tk/api/character",
+  "locations": "http://tiny-rick.tk/api/location",
+  "episodes": "http://tiny-rick.tk/api/episode"
 }
 ```
 
@@ -115,14 +115,14 @@ Each resource contains an `info` object with information about the response.
 
 *Sample request*
 ```
-https://rickandmortyapi.com/api/character/
+http://tiny-rick.tk/api/character/
 ```
 ```js
 {
   "info": {
     "count": 394,
     "pages": 20,
-    "next": "https://rickandmortyapi.com/api/character/?page=2",
+    "next": "http://tiny-rick.tk/api/character/?page=2",
     "prev": ""
   },
   "results": [
@@ -135,7 +135,7 @@ You can access different pages with the `page` parameter. If you don't specify a
 *Sample request*
 
 ```
-https://rickandmortyapi.com/api/character/?page=19
+http://tiny-rick.tk/api/character/?page=19
 ```
 
 ```js
@@ -143,8 +143,8 @@ https://rickandmortyapi.com/api/character/?page=19
   "info": {
     "count": 394,
     "pages": 20,
-    "next": "https://rickandmortyapi.com/api/character/?page=20",
-    "prev": "https://rickandmortyapi.com/api/character/?page=18"
+    "next": "http://tiny-rick.tk/api/character/?page=20",
+    "prev": "http://tiny-rick.tk/api/character/?page=18"
   },
   "results": [
     {
@@ -156,17 +156,17 @@ https://rickandmortyapi.com/api/character/?page=19
       "gender": "Male",
       "origin": {
         "name": "Alien Spa",
-        "url": "https://rickandmortyapi.com/api/location/64"
+        "url": "http://tiny-rick.tk/api/location/64"
       },
       "location": {
         "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "url": "http://tiny-rick.tk/api/location/20"
       },
-      "image": "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
+      "image": "http://tiny-rick.tk/api/character/avatar/361.jpeg",
       "episode": [
-        "https://rickandmortyapi.com/api/episode/27"
+        "http://tiny-rick.tk/api/episode/27"
       ],
-      "url": "https://rickandmortyapi.com/api/character/361",
+      "url": "http://tiny-rick.tk/api/character/361",
       "created": "2018-01-10T18:20:41.703Z"
     },
     // ...
@@ -196,14 +196,14 @@ There is a total of 493 characters sorted by id.
 ### Get all characters
 You can access the list of characters by using the `/character` endpoint.
 ```
-https://rickandmortyapi.com/api/character/
+http://tiny-rick.tk/api/character/
 ```
 ```js
 {
   "info": {
     "count": 394,
     "pages": 20,
-    "next": "https://rickandmortyapi.com/api/character/?page=2",
+    "next": "http://tiny-rick.tk/api/character/?page=2",
     "prev": ""
   },
   "results": [
@@ -216,19 +216,19 @@ https://rickandmortyapi.com/api/character/
       "gender": "Male",
       "origin": {
         "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/1"
+        "url": "http://tiny-rick.tk/api/location/1"
       },
       "location": {
         "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "url": "http://tiny-rick.tk/api/location/20"
       },
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "image": "http://tiny-rick.tk/api/character/avatar/1.jpeg",
       "episode": [
-        "https://rickandmortyapi.com/api/episode/1",
-        "https://rickandmortyapi.com/api/episode/2",
+        "http://tiny-rick.tk/api/episode/1",
+        "http://tiny-rick.tk/api/episode/2",
         // ...
       ],
-      "url": "https://rickandmortyapi.com/api/character/1",
+      "url": "http://tiny-rick.tk/api/character/1",
       "created": "2017-11-04T18:48:46.250Z"
     },
     // ...
@@ -238,7 +238,7 @@ https://rickandmortyapi.com/api/character/
 ### Get a single character
 You can get a single character by adding the `id` as a parameter: `/character/2`
 ```
-https://rickandmortyapi.com/api/character/2
+http://tiny-rick.tk/api/character/2
 ```
 ```js
 {
@@ -250,19 +250,19 @@ https://rickandmortyapi.com/api/character/2
   "gender": "Male",
   "origin": {
     "name": "Earth",
-    "url": "https://rickandmortyapi.com/api/location/1"
+    "url": "http://tiny-rick.tk/api/location/1"
   },
   "location": {
     "name": "Earth",
-    "url": "https://rickandmortyapi.com/api/location/20"
+    "url": "http://tiny-rick.tk/api/location/20"
   },
-  "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+  "image": "http://tiny-rick.tk/api/character/avatar/2.jpeg",
   "episode": [
-    "https://rickandmortyapi.com/api/episode/1",
-    "https://rickandmortyapi.com/api/episode/2",
+    "http://tiny-rick.tk/api/episode/1",
+    "http://tiny-rick.tk/api/episode/2",
     // ...
   ],
-  "url": "https://rickandmortyapi.com/api/character/2",
+  "url": "http://tiny-rick.tk/api/character/2",
   "created": "2017-11-04T18:50:21.651Z"
 }
 ```
@@ -270,7 +270,7 @@ https://rickandmortyapi.com/api/character/2
 ### Get multiple characters
 You can get multiple characters by adding an array of `ids` as parameter: `/character/[1,2,3]` or `/character/1,2,3`
 ```
-https://rickandmortyapi.com/api/character/1,183
+http://tiny-rick.tk/api/character/1,183
 ```
 ```js
 [
@@ -283,19 +283,19 @@ https://rickandmortyapi.com/api/character/1,183
     "gender": "Male",
     "origin": {
       "name": "Earth (C-137)",
-      "url": "https://rickandmortyapi.com/api/location/1"
+      "url": "http://tiny-rick.tk/api/location/1"
     },
     "location": {
       "name": "Earth (Replacement Dimension)",
-      "url": "https://rickandmortyapi.com/api/location/20"
+      "url": "http://tiny-rick.tk/api/location/20"
     },
-    "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    "image": "http://tiny-rick.tk/api/character/avatar/1.jpeg",
     "episode": [
-      "https://rickandmortyapi.com/api/episode/1",
-      "https://rickandmortyapi.com/api/episode/2",
+      "http://tiny-rick.tk/api/episode/1",
+      "http://tiny-rick.tk/api/episode/2",
       // ...
     ],
-    "url": "https://rickandmortyapi.com/api/character/1",
+    "url": "http://tiny-rick.tk/api/character/1",
     "created": "2017-11-04T18:48:46.250Z"
   },
   {
@@ -307,17 +307,17 @@ https://rickandmortyapi.com/api/character/1,183
     "gender": "Male",
     "origin": {
       "name": "Earth (C-500A)",
-      "url": "https://rickandmortyapi.com/api/location/23"
+      "url": "http://tiny-rick.tk/api/location/23"
     },
     "location": {
       "name": "Earth (C-500A)",
-      "url": "https://rickandmortyapi.com/api/location/23"
+      "url": "http://tiny-rick.tk/api/location/23"
     },
-    "image": "https://rickandmortyapi.com/api/character/avatar/183.jpeg",
+    "image": "http://tiny-rick.tk/api/character/avatar/183.jpeg",
     "episode": [
-      "https://rickandmortyapi.com/api/episode/8"
+      "http://tiny-rick.tk/api/episode/8"
     ],
-    "url": "https://rickandmortyapi.com/api/character/183",
+    "url": "http://tiny-rick.tk/api/character/183",
     "created": "2017-12-29T18:51:29.693Z"
   }
 ]
@@ -337,7 +337,7 @@ Available parameters:
 
 *Sample request*
 ```
-https://rickandmortyapi.com/api/character/?name=rick&status=alive
+http://tiny-rick.tk/api/character/?name=rick&status=alive
 ```
 ```js
 
@@ -357,19 +357,19 @@ https://rickandmortyapi.com/api/character/?name=rick&status=alive
       "gender": "Male",
       "origin": {
         "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/1"
+        "url": "http://tiny-rick.tk/api/location/1"
       },
       "location": {
         "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "url": "http://tiny-rick.tk/api/location/20"
       },
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "image": "http://tiny-rick.tk/api/character/avatar/1.jpeg",
       "episode": [
-        "https://rickandmortyapi.com/api/episode/1",
-        "https://rickandmortyapi.com/api/episode/2",
+        "http://tiny-rick.tk/api/episode/1",
+        "http://tiny-rick.tk/api/episode/2",
         //...
       ],
-      "url": "https://rickandmortyapi.com/api/character/1",
+      "url": "http://tiny-rick.tk/api/character/1",
       "created": "2017-11-04T18:48:46.250Z"
     },
     // ...
@@ -394,14 +394,14 @@ There is a total of 76 locations sorted by id.
 ### Get all locations
 You can access the list of locations by using the `/location` endpoint.
 ```
-https://rickandmortyapi.com/api/location/
+http://tiny-rick.tk/api/location/
 ```
 ```js
 
   "info": {
     "count": 67,
     "pages": 4,
-    "next": "https://rickandmortyapi.com/api/location?page=2",
+    "next": "http://tiny-rick.tk/api/location?page=2",
     "prev": ""
   },
   "results": [
@@ -411,11 +411,11 @@ https://rickandmortyapi.com/api/location/
       "type": "Planet",
       "dimension": "Dimension C-137",
       "residents": [
-        "https://rickandmortyapi.com/api/character/1",
-        "https://rickandmortyapi.com/api/character/2",
+        "http://tiny-rick.tk/api/character/1",
+        "http://tiny-rick.tk/api/character/2",
         // ...
       ],
-      "url": "https://rickandmortyapi.com/api/location/1",
+      "url": "http://tiny-rick.tk/api/location/1",
       "created": "2017-11-10T12:42:04.162Z"
     }
     // ...
@@ -425,7 +425,7 @@ https://rickandmortyapi.com/api/location/
 ### Get a single location
 You can get a single location by adding the `id` as a parameter: `/location/3`
 ```
-https://rickandmortyapi.com/api/location/3
+http://tiny-rick.tk/api/location/3
 ```
 ```js
 {
@@ -434,11 +434,11 @@ https://rickandmortyapi.com/api/location/3
   "type": "Space station",
   "dimension": "unknown",
   "residents": [
-    "https://rickandmortyapi.com/api/character/8",
-    "https://rickandmortyapi.com/api/character/14",
+    "http://tiny-rick.tk/api/character/8",
+    "http://tiny-rick.tk/api/character/14",
     // ...
   ],
-  "url": "https://rickandmortyapi.com/api/location/3",
+  "url": "http://tiny-rick.tk/api/location/3",
   "created": "2017-11-10T13:08:13.191Z"
 }
 ```
@@ -446,7 +446,7 @@ https://rickandmortyapi.com/api/location/3
 ### Get multiple locations
 You can get multiple locations by adding an array of `ids` as parameter: `/location/[1,2,3]` or `/location/1,2,3`
 ```
-https://rickandmortyapi.com/api/location/3,21
+http://tiny-rick.tk/api/location/3,21
 ```
 ```js
 [
@@ -456,11 +456,11 @@ https://rickandmortyapi.com/api/location/3,21
     "type": "Space station",
     "dimension": "unknown",
     "residents": [
-      "https://rickandmortyapi.com/api/character/8",
-      "https://rickandmortyapi.com/api/character/14",
+      "http://tiny-rick.tk/api/character/8",
+      "http://tiny-rick.tk/api/character/14",
       // ...
     ],
-    "url": "https://rickandmortyapi.com/api/location/3",
+    "url": "http://tiny-rick.tk/api/location/3",
     "created": "2017-11-10T13:08:13.191Z"
   },
   {
@@ -469,10 +469,10 @@ https://rickandmortyapi.com/api/location/3,21
     "type": "Dimension",
     "dimension": "Testicle Monster Dimension",
     "residents": [
-      "https://rickandmortyapi.com/api/character/7",
-      "https://rickandmortyapi.com/api/character/436"
+      "http://tiny-rick.tk/api/character/7",
+      "http://tiny-rick.tk/api/character/436"
     ],
-    "url": "https://rickandmortyapi.com/api/location/21",
+    "url": "http://tiny-rick.tk/api/location/21",
     "created": "2017-11-18T19:41:01.605Z"
   }
 ]
@@ -489,7 +489,7 @@ If you want to know how to use queries, check [here](#filter-characters)
 
 *Sample request*
 ```
-https://rickandmortyapi.com/api/location/?name=earth
+http://tiny-rick.tk/api/location/?name=earth
 ```
 ```js
 
@@ -506,11 +506,11 @@ https://rickandmortyapi.com/api/location/?name=earth
       "type": "Planet",
       "dimension": "Dimension C-137",
       "residents": [
-        "https://rickandmortyapi.com/api/character/1",
-        "https://rickandmortyapi.com/api/character/2",
+        "http://tiny-rick.tk/api/character/1",
+        "http://tiny-rick.tk/api/character/2",
         // ...
       ],
-      "url": "https://rickandmortyapi.com/api/location/1",
+      "url": "http://tiny-rick.tk/api/location/1",
       "created": "2017-11-10T12:42:04.162Z"
     },
     // ...
@@ -529,6 +529,7 @@ There is a total of 31 episodes sorted by id (which is of course the order of th
 |air_date|string|The air date of the episode.
 |episode|string|The code of the episode.
 |characters|array (urls)|List of characters who have been seen in the episode.
+|comments|array|List of all comments for the given episode.
 |url|string (url)|Link to the episode's own endpoint.
 |created|string|Time at which the episode was created in the database.
 
@@ -536,14 +537,14 @@ There is a total of 31 episodes sorted by id (which is of course the order of th
 You can access the list of episodes by using the `/episode` endpoint.
 
 ```
-https://rickandmortyapi.com/api/episode/
+http://tiny-rick.tk/api/episode/
 ```
 ```js
 {
   "info": {
     "count": 31,
     "pages": 2,
-    "next": "https://rickandmortyapi.com/api/episode?page=2",
+    "next": "http://tiny-rick.tk/api/episode?page=2",
     "prev": ""
   },
   "results": [
@@ -553,11 +554,11 @@ https://rickandmortyapi.com/api/episode/
       "air_date": "December 2, 2013",
       "episode": "S01E01",
       "characters": [
-        "https://rickandmortyapi.com/api/character/1",
-        "https://rickandmortyapi.com/api/character/2",
+        "http://tiny-rick.tk/api/character/1",
+        "http://tiny-rick.tk/api/character/2",
         //...
       ],
-      "url": "https://rickandmortyapi.com/api/episode/1",
+      "url": "http://tiny-rick.tk/api/episode/1",
       "created": "2017-11-10T12:56:33.798Z"
     },
     // ...
@@ -568,7 +569,7 @@ https://rickandmortyapi.com/api/episode/
 ### Get a single episode
 You can get a single episode by adding the `id` as a parameter: `/episode/28`
 ```
-https://rickandmortyapi.com/api/episode/28
+http://tiny-rick.tk/api/episode/28
 ```
 ```js
 {
@@ -577,11 +578,11 @@ https://rickandmortyapi.com/api/episode/28
   "air_date": "September 10, 2017",
   "episode": "S03E07",
   "characters": [
-    "https://rickandmortyapi.com/api/character/1",
-    "https://rickandmortyapi.com/api/character/2",
+    "http://tiny-rick.tk/api/character/1",
+    "http://tiny-rick.tk/api/character/2",
     // ...
   ],
-  "url": "https://rickandmortyapi.com/api/episode/28",
+  "url": "http://tiny-rick.tk/api/episode/28",
   "created": "2017-11-10T12:56:36.618Z"
 }
 ```
@@ -589,7 +590,7 @@ https://rickandmortyapi.com/api/episode/28
 ### Get multiple episodes
 You can get multiple episodes by adding an array of `ids` as parameter: `/episode/[1,2,3]` or `/episode/1,2,3`
 ```
-https://rickandmortyapi.com/api/episode/10,28
+http://tiny-rick.tk/api/episode/10,28
 ```
 ```js
 [
@@ -599,11 +600,11 @@ https://rickandmortyapi.com/api/episode/10,28
     "air_date": "April 7, 2014",
     "episode": "S01E10",
     "characters": [
-      "https://rickandmortyapi.com/api/character/1",
-      "https://rickandmortyapi.com/api/character/2",
+      "http://tiny-rick.tk/api/character/1",
+      "http://tiny-rick.tk/api/character/2",
       // ...
     ],
-    "url": "https://rickandmortyapi.com/api/episode/10",
+    "url": "http://tiny-rick.tk/api/episode/10",
     "created": "2017-11-10T12:56:34.747Z"
   },
   {
@@ -612,11 +613,11 @@ https://rickandmortyapi.com/api/episode/10,28
     "air_date": "September 10, 2017",
     "episode": "S03E07",
     "characters": [
-      "https://rickandmortyapi.com/api/character/1",
-      "https://rickandmortyapi.com/api/character/2",
+      "http://tiny-rick.tk/api/character/1",
+      "http://tiny-rick.tk/api/character/2",
       // ...
     ],
-    "url": "https://rickandmortyapi.com/api/episode/28",
+    "url": "http://tiny-rick.tk/api/episode/28",
     "created": "2017-11-10T12:56:36.618Z"
   }
 ]
@@ -628,6 +629,135 @@ Available parameters:
 - `episode`: filter by the given episode code.
 
 If you want to know how to use queries, check [here](#filter-characters)
+
+## Comments
+
+### Get all comments for the given episode
+You can access the list of episodes by using the `/episode/:id/comments` endpoint.
+
+```
+http://tiny-rick.tk/api/episode/1/comments
+```
+```js
+{
+  "info": {
+    "count": 31,
+    "pages": 2,
+    "next": "http://tiny-rick.tk/api/episode/1/comments?page=2",
+    "prev": ""
+  },
+  "results": [
+    {
+      "id": 1,
+      "author": "Bob",
+      "content": "Awesome!",
+      "episode_id": 1,
+      "created": "2017-11-10T12:56:33.798Z"
+    },
+    // ...
+  ]
+}
+```
+
+### Post new comment for the given episode
+You can post new comment using `/episode/:id/comments` endpoint.
+
+```
+POST http://tiny-rick.tk/api/episode/1/comments
+```
+Example request payload:
+```js
+{
+  content: 'Awesome!',
+  author: 'Bob',
+}
+```
+Example response:
+```js
+{
+  "id": 1,
+  "author": "Bob",
+  "content": "Awesome!",
+  "episode_id": 1,
+  "created": "2017-11-10T12:56:33.798Z"
+}
+```
+
+## Quiz Questions
+There is a total of 3 questions for the quiz.
+
+### Episode schema
+|Key|Type|Description|
+|---|---|---|
+|id|int|The id of the question.
+|type|string|The type of the question (text / select).
+|value|string|The question.
+|options|array ({ id, value })|Options for question of `select` type
+
+### Get all questions
+You can access the list of all questions by using the `/questions` endpoint.
+
+```
+http://tiny-rick.tk/api/questions/
+```
+```js
+[
+  {
+    id: 1,
+    type: 'text',
+    value: 'How old are you?',
+  },
+  {
+    id: 2,
+    type: 'select',
+    value: 'How much commercial experience do you have with programming?',
+    options: [
+      { id: 1, value: 'not at all' },
+      { id: 2, value: 'less than 1 year' },
+      { id: 3, value: '1-3 years' },
+      { id: 4, value: 'more than 3 years' },
+    ],
+  },
+  {
+    id: 3,
+    type: 'text',
+    value: 'How is your planet called?',
+  },
+]
+```
+
+### Post quiz answers
+You can post quiz answers using `POST /quiz` endpoint.
+
+```
+POST http://tiny-rick.tk/api/quiz/
+```
+Example request body:
+```js
+[
+  {
+    questionId: 1,
+    answer: 20,
+  },
+  {
+    questionId: 2,
+    answer: 2,
+  },
+  {
+    questionId: 1,
+    answer: 'Earth',
+  },
+]
+```
+
+Example response:
+```js
+{
+  name: 'Rick',
+  image: 'avatar.jpg'
+}
+```
+
 
 ## Libraries
 Here you will find a list of helper libraries to use the Rick and Morty API with your preferred language.   
