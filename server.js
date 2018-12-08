@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.use('*', handle.limit)
+// app.use('*', handle.limit)
 app.get('/', (req, res) => res.redirect('/api'))
 app.use('/api', api)
 
